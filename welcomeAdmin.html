@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>MDB - Votacao</title>
+
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="mdbLogo.png">
+</head>
+
+<body id="page-top">
+    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow d-flex justify-content-between">
+        <div class="d-flex">
+            <a href="welcomeAdmin.html" class="navbar-brand">
+                <img src="mdbLogo.png" alt="" style="height: 3.5rem;">
+            </a>
+            <a href="votacoesAdmin.html" class="btn d-flex justify-content-center align-items-center">Votacoes</a>
+            <div class="dropdown d-flex justify-content-center align-items-center">
+                <a class="btn nav-link dropdown-toggle" id="listDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Listas</a>
+
+                <div class="dropdown-menu shadow animated--grow-in" aria-labelledby="listDropdown">
+                    <a class="dropdown-item" href="ListaRecepcaoAdmin.html">Recepcao</a>
+                    <a class="dropdown-item" href="listaMesarioAdmin.html">Mesario</a>
+                </div>
+            </div>
+            <a href="admin.html" class="btn d-flex justify-content-center align-items-center text-danger">Admin</a>
+        </div>
+        
+        <div class="navbar-nav d-flex justify-content-center align-items-center" >
+            <span class="mr-2 d-none d-lg-inline text-gray-600">Ola, <span class="mdb">admin</span></span>
+            <div class="topbar-divider d-none d-sm-block"></div>
+            <a class="btn d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#logoutModal">
+                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                Logout
+            </a>
+        </div>
+    </nav>
+
+    <section class="container d-flex flex-wrap align-content-center" style="height: 80vh;">
+        <div class="d-flex flex-wrap justify-content-center">
+            <h1 class="display-3">Bem vindo, <span style="color: green;">admin</span></h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati harum facilis fugit ipsum laborum vero qui impedit labore blanditiis vel quibusdam quidem fuga amet perferendis, sint voluptatibus laudantium? Nam, nisi?</p>
+            <a href="admin.html" class="btn btn-mdb">
+                Painel de controle
+            </a>
+        </div>
+    </section>
+
+    <footer class="border-top bg-white mt-9">
+        <div class="container">
+            <div class="copyright text-center my-auto ">
+                <span>Copyright &copy; MDB - 2023</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Deseja sair?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Selecione "Sair" abaixo se estiver pronto para finalizar a sessao</div>
+                <div class="modal-footer justify-content-between">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-primary" href="login.html">Sair</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+</body>
+
+</html>

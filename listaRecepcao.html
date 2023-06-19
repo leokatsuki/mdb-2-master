@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>MDB - Votacao</title>
+
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="mdbLogo.png">
+</head>
+
+<body id="page-top">
+    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow d-flex justify-content-between">
+        <div class="d-flex">
+            <a href="welcomeRecepcao.html" class="navbar-brand">
+                <img src="mdbLogo.png" alt="" style="height: 3.5rem;">
+            </a>
+            <a href="listaRecepcao.html" class="btn d-flex justify-content-center align-items-center">Lista recepcao</a>
+        </div>
+        
+        <div class="navbar-nav d-flex justify-content-center align-items-center" >
+            <span class="mr-2 d-none d-lg-inline text-gray-600">Ola, <span class="mdb">recepcao</span></span>
+            <div class="topbar-divider d-none d-sm-block"></div>
+            <a class="btn d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#logoutModal">
+                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                Logout
+            </a>
+        </div>
+    </nav>
+
+    <div id="content-wrapper">
+        <div id="content">
+            <div class="container-fluid">
+                <h1 class="h3 mb-9 text-gray-800">Lista de usuarios</h1>
+                <div class="card shadow mb-9">
+                    <div class="table-responsive p-4">
+                        <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>CPF</th>
+                                    <th>E-mail</th>
+                                    <th>Telefone</th>
+                                    <th style="width: 11%;">Confirmar presenca</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Lucas Silva</td>
+                                    <td>123.456.789-00</td>
+                                    <td>lucas.silva@email.com</td>
+                                    <td> (11) 98765-4321</td>
+                                    <td class="flex">
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn btn-primary btn-sm w-50 d-flex justify-content-center" data-toggle="modal" data-target="#dadosModal">
+                                                <img src="svg/check.svg" alt="">
+                                            </button>
+                                        </div>  
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Ana Santos</td>
+                                    <td> 234.567.890-12</td>
+                                    <td>ana.santos@email.com</td>
+                                    <td>(22) 87654-3210</td>
+                                    <td class="flex">
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn btn-primary btn-sm w-50 d-flex justify-content-center" disabled data-toggle="modal" data-target="#dadosModal">
+                                                <img src="svg/check.svg" alt="">
+                                            </button>
+                                        </div>  
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Rafaela Costa</td>
+                                    <td>345.678.901-23</td>
+                                    <td>rafaela.costa@email.com</td>
+                                    <td>(33) 76543-2109</td>
+                                    <td class="flex">
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn btn-primary btn-sm w-50 d-flex justify-content-center" data-toggle="modal" data-target="#dadosModal">
+                                                <img src="svg/check.svg" alt="">
+                                            </button>
+                                        </div>  
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>João Oliveira</td>
+                                    <td> 456.789.012-34</td>
+                                    <td>joao.oliveira@email.com</td>
+                                    <td> (44) 65432-1098</td>
+                                    <td class="flex">
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn btn-primary btn-sm w-50 d-flex justify-content-center" data-toggle="modal" data-target="#dadosModal">
+                                                <img src="svg/check.svg" alt="">
+                                            </button>
+                                        </div>  
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Maria Santos</td>
+                                    <td>567.890.123-45</td>
+                                    <td>maria.santos@email.com</td>
+                                    <td>(55) 54321-0987</td>
+                                    <td class="flex">
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn btn-primary btn-sm w-50 d-flex justify-content-center" data-toggle="modal" data-target="#dadosModal">
+                                                <img src="svg/check.svg" alt="">
+                                            </button>
+                                        </div>  
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Pedro Almeida</td>
+                                    <td>678.901.234-56</td>
+                                    <td>pedro.almeida@email.com</td>
+                                    <td>(66) 43210-9876</td>
+                                    <td class="flex">
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn btn-primary btn-sm w-50 d-flex justify-content-center" data-toggle="modal" data-target="#dadosModal">
+                                                <img src="svg/check.svg" alt="">
+                                            </button>
+                                        </div>  
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Gabriela Rodrigues</td>
+                                    <td>789.012.345-67</td>
+                                    <td>gabriela.rodrigues@email.com</td>
+                                    <td>(77) 32109-8765</td>
+                                    <td class="flex">
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn btn-primary btn-sm w-50 d-flex justify-content-center" data-toggle="modal" data-target="#dadosModal">
+                                                <img src="svg/check.svg" alt="">
+                                            </button>
+                                        </div>  
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>André Costa</td>
+                                    <td> 890.123.456-78</td>
+                                    <td>andre.costa@email.com</td>
+                                    <td>(88) 21098-7654</td>
+                                    <td class="flex">
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn btn-success btn-sm w-50 text-black-50 font-weight-bold" data-toggle="modal" data-target="#dadosModal">
+                                                remoto
+                                            </button>
+                                        </div>  
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Laura Ferreira</td>
+                                    <td>901.234.567-89</td>
+                                    <td>laura.ferreira@email.com</td>
+                                    <td>(99) 10987-6543</td>
+                                    <td class="flex">
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn btn-primary btn-sm w-50 d-flex justify-content-center" data-toggle="modal" data-target="#dadosModal">
+                                                <img src="svg/check.svg" alt="">
+                                            </button>
+                                        </div>  
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Marcos Santos</td>
+                                    <td> 012.345.678-90</td>
+                                    <td>marcos.santos@email.com</td>
+                                    <td>(00) 09876-5432</td>
+                                    <td class="flex">
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn btn-primary btn-sm w-50 d-flex justify-content-center" data-toggle="modal" data-target="#dadosModal">
+                                                <img src="svg/check.svg" alt="">
+                                            </button>
+                                        </div>  
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Camila Pereira</td>
+                                    <td>123.456.789-01</td>
+                                    <td>camila.pereira@email.com</td>
+                                    <td> (11) 98765-4321</td>
+                                    <td class="flex">
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn btn-success btn-sm w-50 text-black-50 font-weight-bold" data-toggle="modal" data-target="#dadosModal">
+                                                presencial
+                                            </button>
+                                        </div> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Felipe Lima</td>
+                                    <td> 234.567.890-12</td>
+                                    <td> felipe.lima@email.com</td>
+                                    <td>(22) 87654-3210</td>
+                                    <td class="flex">
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn btn-primary btn-sm w-50 d-flex justify-content-center" data-toggle="modal" data-target="#dadosModal">
+                                                <img src="svg/check.svg" alt="">
+                                            </button>
+                                        </div>  
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> Ana Oliveira</td>
+                                    <td>345.678.901-23</td>
+                                    <td>ana.oliveira@email.com</td>
+                                    <td>(33) 76543-2109</td>
+                                    <td class="flex">
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn btn-primary btn-sm w-50 d-flex justify-content-center" data-toggle="modal" data-target="#dadosModal">
+                                                <img src="svg/check.svg" alt="">
+                                            </button>
+                                        </div>  
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Rodrigo Fernandes</td>
+                                    <td>456.789.012-34</td>
+                                    <td>rodrigo.fernandes@email.com</td>
+                                    <td> (44) 65432-1098</td>
+                                    <td class="flex">
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn btn-primary btn-sm w-50 d-flex justify-content-center" data-toggle="modal" data-target="#dadosModal">
+                                                <img src="svg/check.svg" alt="">
+                                            </button>
+                                        </div>  
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="border-top bg-white mt-9">
+        <div class="container">
+            <div class="copyright text-center my-auto ">
+                <span>Copyright &copy; MDB - 2023</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="dadosModal" tabindex="-1" role="dialog" aria-labelledby="dadosModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="dadosModalLabel">Deseja confirmar o usuario?</h5>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Nome:</strong> <span id="modalNome"></span></p>
+                    <p><strong>CPF:</strong> <span id="modalCpf"></span></p>
+                    <p><strong>Telefone:</strong> <span id="modalTelefone"></span></p>
+                    <p><strong>Email:</strong> <span id="modalEmail"></span></p>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Deseja sair?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Selecione "Sair" abaixo se estiver pronto para finalizar a sessao</div>
+                <div class="modal-footer justify-content-between">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-primary" href="login.html">Sair</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="js/demo/datatables-demo.js"></script>
+    <script>
+        function confirmarPresenca() {
+            // Obtendo a linha da tabela que contém o botão de confirmação
+            var row = event.target.parentNode.parentNode;
+
+            // Obtendo os dados da linha
+            var nome = row.cells[0].innerText;
+            var cpf = row.cells[1].innerText;
+            var telefone = row.cells[2].innerText;
+            var email = row.cells[3].innerText;
+
+            // Preenchendo o modal com os dados obtidos
+            document.getElementById("modalNome").textContent = nome;
+            document.getElementById("modalCpf").textContent = cpf;
+            document.getElementById("modalTelefone").textContent = telefone;
+            document.getElementById("modalEmail").textContent = email;
+
+            // Abrindo o modal
+            $('#dadosModal').modal('show');
+        }
+    </script>
+
+</body>
+
+</html>
