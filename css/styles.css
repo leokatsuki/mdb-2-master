@@ -11301,5 +11301,29 @@ footer {
 }
 
 .h80{
+  height: 100vh;
+}
+
+.h90{
   height: 90vh;
+}
+
+.divider{
+  width: 0;
+  border-right: 1px solid #e3e6f0;
+  height: calc(4.375rem - 2rem);
+}
+
+@media screen and (min-width: 768px) {
+  /* Tamanho da tela grande */
+  .voting-section{
+    height: 90vh;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* Tamanho da tela pequena */
+  .voting-section{
+    height: auto;
+  }
 }
