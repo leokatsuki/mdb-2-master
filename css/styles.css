@@ -11271,7 +11271,6 @@ body.sidebar-toggled footer.sticky-footer {
 }
 
 footer {
-  display: relative;
   bottom: 0;
   margin-top: 20px;
   width: 100%;
@@ -11299,4 +11298,8 @@ footer {
 
 .border-red {
   border: 1px solid red;
+}
+
+.h80{
+  height: 90vh;
 }
