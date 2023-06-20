@@ -1,5 +1,3 @@
-
-
 const bx = document.querySelector('.bx');
 const menu_mobile = document.querySelector('.menu-mobile');
 const link_mobile = document.querySelectorAll('.link-menu-mobile');
@@ -13,8 +11,6 @@ link_mobile.forEach((item) => {
         
     })
 })
-
-//menu_mobile.classList.add('hidemenu');
 
 bx.addEventListener('click', () =>{
     bx.classList.toggle('activebx');

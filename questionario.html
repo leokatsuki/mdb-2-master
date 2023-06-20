@@ -11,13 +11,13 @@
 
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <link href="css/sb-admin-2.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="mdbLogo.png">
 </head>
 <body>
   <body>
-    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow d-flex justify-content-between">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white topbar mb-4 static-top shadow d-flex justify-content-between">
       <div class="d-flex">
           <a href="welcomeVotante.html" class="navbar-brand">
               <img src="mdbLogo.png" alt="" style="height: 3.5rem;">
@@ -33,7 +33,7 @@
               Logout
           </a>
       </div>
-    </nav>
+  </nav>
 
     <div class="container">
       <form class="d-flex flex-column justify-content-center align-items-center">
@@ -43,17 +43,21 @@
             <hr>
             <div class="d-flex justify-content-center">
               <div class="d-flex flex-column w-75" data-toggle="buttons">
-                <label class="btn btn-outline-dark mt-3 font-weight-bold">
-                  <input type="radio" name="options" id="sim" autocomplete="off"> Sim
+                <label class="btn btn-outline-dark btn-small mt-3 font-weight-bold">
+                  <input type="radio" name="options" id="sim" autocomplete="off">
+                  <p class="btn-text">Sim</p>
                 </label>
-                <label class="btn btn-outline-dark mt-3 font-weight-bold">
-                  <input type="radio" name="options" id="nao" autocomplete="off"> Nao
+                <label class="btn btn-outline-dark btn-small mt-3 font-weight-bold">
+                  <input type="radio" name="options" id="nao" autocomplete="off">
+                  <p class="btn-text">Nao</p>
                 </label>
-                <label class="btn btn-outline-dark mt-3 font-weight-bold">
-                  <input type="radio" name="options" id="concordoPouco" autocomplete="off"> Concordo pouco
+                <label class="btn btn-outline-dark btn-small mt-3 font-weight-bold">
+                  <input type="radio" name="options" id="concordoPouco" autocomplete="off"> 
+                  <p class="btn-text">Concordo pouco</p>
                 </label>
-                <label class="btn btn-outline-dark mt-3 font-weight-bold">
-                  <input type="radio" name="options" id="concordoPouco" autocomplete="off"> Concordo muito
+                <label class="btn btn-outline-dark btn-small mt-3 font-weight-bold">
+                  <input type="radio" name="options" id="concordoPouco" autocomplete="off">
+                  <p class="btn-text">Concordo muito</p>
                 </label>
               </div>
             </div>
@@ -66,14 +70,21 @@
             <hr>
             <div class="d-flex justify-content-center">
               <div class="d-flex flex-column w-75" data-toggle="buttons">
-                <label class="btn btn-outline-dark mt-3 font-weight-bold">
-                  <input type="radio" name="options" id="sim" autocomplete="off"> Sim
+                <label class="btn btn-outline-dark btn-small mt-3 font-weight-bold">
+                  <input type="radio" name="options" id="sim" autocomplete="off">
+                  <p class="btn-text">Sim</p>
                 </label>
-                <label class="btn btn-outline-dark mt-3 font-weight-bold">
-                  <input type="radio" name="options" id="nao" autocomplete="off"> Nao
+                <label class="btn btn-outline-dark btn-small mt-3 font-weight-bold">
+                  <input type="radio" name="options" id="nao" autocomplete="off">
+                  <p class="btn-text">Nao</p>
                 </label>
-                <label class="btn btn-outline-dark mt-3 font-weight-bold">
-                  <input type="radio" name="options" id="concordoPouco" autocomplete="off"> Concordo pouco
+                <label class="btn btn-outline-dark btn-small mt-3 font-weight-bold">
+                  <input type="radio" name="options" id="concordoPouco" autocomplete="off"> 
+                  <p class="btn-text">Concordo pouco</p>
+                </label>
+                <label class="btn btn-outline-dark btn-small mt-3 font-weight-bold">
+                  <input type="radio" name="options" id="concordoPouco" autocomplete="off">
+                  <p class="btn-text">Concordo muito</p>
                 </label>
               </div>
             </div>
@@ -95,6 +106,16 @@
     <style>
       label > input[type=radio] {
         visibility: hidden;
+      }
+
+      @media (max-width: 576px) {
+        .btn-text {
+          font-size: 12px;
+        }
+        .btn-small {
+          padding: 0.15rem 0.3rem;
+          font-size: 12px;
+        }
       }
     </style>
 
