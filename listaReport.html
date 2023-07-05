@@ -12,34 +12,29 @@
     <title>MDB - Votacao</title>
 
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="mdbLogo.png">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow d-flex justify-content-between">
+    <nav
+        class="navbar navbar-expand-lg navbar-light bg-white topbar mb-4 static-top shadow d-flex justify-content-between">
         <div class="d-flex">
-            <a href="welcomeAdmin.html" class="navbar-brand">
-                <img src="mdbLogo.png" alt="" style="height: 3.5rem;">
+            <a href="welcomeReport.html" class="navbar-brand">
+                <img src="mdbLogo.png" alt="" style="height: 3.5rem" />
             </a>
-            <a href="votacoesAdmin.html" class="btn d-flex justify-content-center align-items-center">Votacoes</a>
-            <div class="dropdown d-flex justify-content-center align-items-center">
-                <a class="btn nav-link dropdown-toggle" id="listDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Listas</a>
-
-                <div class="dropdown-menu shadow animated--grow-in" aria-labelledby="listDropdown">
-                    <a class="dropdown-item" href="ListaRecepcaoAdmin.html">Recepcao</a>
-                    <a class="dropdown-item" href="listaMesarioAdmin.html">Mesario</a>
-                </div>
-            </div>
-            <a href="admin.html" class="btn d-flex justify-content-center align-items-center text-danger">Admin</a>
+            <a href="listaReport.html" class="btn d-flex justify-content-center align-items-center">Report</a>
         </div>
-        
-        <div class="navbar-nav d-flex justify-content-center align-items-center" >
-            <span class="mr-2 d-none d-lg-inline text-gray-600">Ola, <span class="mdb">admin</span></span>
+
+        <div class="navbar-nav d-flex justify-content-center align-items-center">
+            <span class="mr-2 d-none d-lg-inline text-gray-600">Ola, <span class="mdb">report</span></span>
             <div class="topbar-divider d-none d-sm-block"></div>
-            <a class="btn d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#logoutModal">
+            <a class="btn d-flex justify-content-center align-items-center" data-toggle="modal"
+                data-target="#logoutModal">
                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                 Logout
             </a>
@@ -51,20 +46,61 @@
             <div class="container-fluid" style="min-height: 80vh;">
                 <div class="d-flex justify-content-between mb-3">
                     <h2 class="text-gray-800 align-self-center">Report</h2>
-                    <div class="card border-left-mdb shadow" style="width: 250px;">
-                        <div class="card-body">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold mdb text-uppercase mb-1">
-                                        Presentes
+                    <div class="row">
+                        <div class="card border-left-primary shadow h-100 py-2 mr-4" style="width: 200px;">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Presentes</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">20%</div>
                                     </div>
-                                    <div class="h2 mb-0 mt-2 text-center font-weight-bold text-gray-800">
-                                        50%
+                                    <div class="col-auto">
+                                        <i class="fas fa-user fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card border-left-secondary shadow h-100 py-2 mr-4" style="width: 200px;">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">Ausentes</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">20%</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-ban fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card border-left-mdb shadow h-100 py-2 mr-4" style="width: 200px;">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold mdb text-uppercase mb-1">Já votou</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">20%</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-check fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card border-left-danger shadow h-100 py-2 mr-4" style="width: 200px;">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Não votou</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">20%</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-exclamation-triangle fa-2x text-gray-300"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
                 <div class="row card">
                     <div class="table-responsive p-4">
@@ -76,7 +112,8 @@
                                     <th style="width: 25%;">E-mail</th>
                                     <th style="width: 6%;">Estado</th>
                                     <th>Telefone</th>
-                                    <th style="width: 5%;">N˚ de votos</th>
+                                    <th>Cargos</th>
+                                    <th style="width: 5%;">Votos</th>
                                     <th style="width: 16%;">Confirmar presenca</th>
                                 </tr>
                             </thead>
@@ -85,117 +122,141 @@
                                     <td>Lucas Silva</td>
                                     <td>123.456.789-00</td>
                                     <td>lucas.silva@email.com</td>
-                                    <td class="text-uppercase">df</td>
+                                    <td class="text-uppercase text-center">df</td>
                                     <td> (11) 98765-4321</td>
-                                    <td>1</td>
+                                    <td>
+                                        <span>Info</span>
+                                    </td>
+                                    <td class="text-center">1</td>
                                     <td class="flex">
                                         <div class="d-flex justify-content-center">
                                             <button class="btn btn-secondary btn-sm w-75 d-flex justify-content-center">
                                                 Não compareceu
                                             </button>
-                                        </div> 
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Ana Santos</td>
                                     <td> 234.567.890-12</td>
                                     <td>ana.santos@email.com</td>
-                                    <td class="text-uppercase">ce</td>
+                                    <td class="text-uppercase text-center">ce</td>
                                     <td>(22) 87654-3210</td>
-                                    <td>2</td>
+                                    <td>
+                                        <a class="link-opacity-100" data-toggle="tooltip" data-placement="right" title="Cargo: titular">Info</a>
+                                    </td>
+                                    <td class="text-center">2</td>
                                     <td class="flex">
                                         <div class="d-flex justify-content-center">
-                                            <button class="btn btn-primary btn-sm w-75 d-flex justify-content-center" data-toggle="modal" data-target="#dadosModal">
-                                                Liberar urna
+                                            <button class="btn btn-primary btn-sm w-75 d-flex justify-content-center">
+                                                Presencial
                                             </button>
-                                        </div>   
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Rafaela Costa</td>
                                     <td>345.678.901-23</td>
                                     <td>rafaela.costa@email.com</td>
-                                    <td class="text-uppercase">am</td>
+                                    <td class="text-uppercase text-center">am</td>
                                     <td>(33) 76543-2109</td>
-                                    <td>1</td>
+                                    <td>
+                                        <span>Info</span>
+                                    </td>
+                                    <td class="text-center">1</td>
                                     <td class="flex">
                                         <div class="d-flex justify-content-center">
                                             <button class="btn btn-secondary btn-sm w-75 d-flex justify-content-center">
                                                 Não compareceu
                                             </button>
-                                        </div> 
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>João Oliveira</td>
                                     <td> 456.789.012-34</td>
                                     <td>joao.oliveira@email.com</td>
-                                    <td class="text-uppercase">ba</td>
+                                    <td class="text-uppercase text-center">ba</td>
                                     <td> (44) 65432-1098</td>
-                                    <td>2</td>
+                                    <td>
+                                        <span>Info</span>
+                                    </td>
+                                    <td class="text-center">2</td>
                                     <td class="flex">
                                         <div class="d-flex justify-content-center">
                                             <button class="btn btn-secondary btn-sm w-75 d-flex justify-content-center">
                                                 Não compareceu
                                             </button>
-                                        </div>  
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Maria Santos</td>
                                     <td>567.890.123-45</td>
                                     <td>maria.santos@email.com</td>
-                                    <td class="text-uppercase">ba</td>
+                                    <td class="text-uppercase text-center">ba</td>
                                     <td>(55) 54321-0987</td>
-                                    <td>2</td>
+                                    <td>
+                                        <span>Info</span>
+                                    </td>
+                                    <td class="text-center">2</td>
                                     <td class="flex">
                                         <div class="d-flex justify-content-center">
                                             <button class="btn btn-secondary btn-sm w-75 d-flex justify-content-center">
                                                 Não compareceu
                                             </button>
-                                        </div> 
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Pedro Almeida</td>
                                     <td>678.901.234-56</td>
                                     <td>pedro.almeida@email.com</td>
-                                    <td class="text-uppercase">mt</td>
+                                    <td class="text-uppercase text-center">mt</td>
                                     <td>(66) 43210-9876</td>
-                                    <td>2</td>
+                                    <td>
+                                        <span>Info</span>
+                                    </td>
+                                    <td class="text-center">2</td>
                                     <td class="flex">
                                         <div class="d-flex justify-content-center">
                                             <button class="btn btn-secondary btn-sm w-75 d-flex justify-content-center">
                                                 Não compareceu
                                             </button>
-                                        </div>  
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Gabriela Rodrigues</td>
                                     <td>789.012.345-67</td>
                                     <td>gabriela.rodrigues@email.com</td>
-                                    <td class="text-uppercase">rn</td>
+                                    <td class="text-uppercase text-center">rn</td>
                                     <td>(77) 32109-8765</td>
-                                    <td>1</td>
+                                    <td>
+                                        <span>Info</span>
+                                    </td>
+                                    <td class="text-center">1</td>
                                     <td class="flex">
                                         <div class="d-flex justify-content-center">
                                             <button class="btn btn-secondary btn-sm w-75 d-flex justify-content-center">
                                                 Não compareceu
                                             </button>
-                                        </div>   
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>André Costa</td>
                                     <td> 890.123.456-78</td>
                                     <td>andre.costa@email.com</td>
-                                    <td class="text-uppercase">rs</td>
+                                    <td class="text-uppercase text-center">rs</td>
                                     <td>(88) 21098-7654</td>
-                                    <td>2</td>
+                                    <td>
+                                        <i class="fa fa-info-circle fa-2x text-primary" data-toggle="tooltip" data-placement="right" title="Cargo: titular"></i>
+                                    </td>
+                                    <td class="text-center">2</td>
                                     <td class="flex">
                                         <div class="d-flex justify-content-center">
-                                            <button class="btn btn-mdb btn-sm w-75">
+                                            <button class="btn btn-primary btn-sm w-75 d-flex justify-content-center">
                                                 Remoto
                                             </button>
                                         </div>
@@ -205,59 +266,71 @@
                                     <td>Laura Ferreira</td>
                                     <td>901.234.567-89</td>
                                     <td>laura.ferreira@email.com</td>
-                                    <td class="text-uppercase">rs</td>
+                                    <td class="text-uppercase text-center">rs</td>
                                     <td>(99) 10987-6543</td>
-                                    <td>1</td>
+                                    <td>
+                                        <span>Info</span>
+                                    </td>
+                                    <td class="text-center">1</td>
                                     <td class="flex">
                                         <div class="d-flex justify-content-center">
                                             <button class="btn btn-secondary btn-sm w-75 d-flex justify-content-center">
                                                 Não compareceu
                                             </button>
-                                        </div> 
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Marcos Santos</td>
                                     <td> 012.345.678-90</td>
                                     <td>marcos.santos@email.com</td>
-                                    <td class="text-uppercase">pb</td>
+                                    <td class="text-uppercase text-center">pb</td>
                                     <td>(00) 09876-5432</td>
-                                    <td>1</td>
+                                    <td>
+                                        <span>Info</span>
+                                    </td>
+                                    <td class="text-center">1</td>
                                     <td class="flex">
                                         <div class="d-flex justify-content-center">
                                             <button class="btn btn-secondary btn-sm w-75 d-flex justify-content-center">
                                                 Não compareceu
                                             </button>
-                                        </div>  
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Camila Pereira</td>
                                     <td>123.456.789-01</td>
                                     <td>camila.pereira@email.com</td>
-                                    <td class="text-uppercase">rj</td>
+                                    <td class="text-uppercase text-center">rj</td>
                                     <td> (11) 98765-4321</td>
-                                    <td>1</td>
+                                    <td>
+                                        <span>Info</span>
+                                    </td>
+                                    <td class="text-center">1</td>
                                     <td class="flex">
                                         <div class="d-flex justify-content-center">
                                             <button class="btn btn-mdb btn-sm w-75">
-                                                Presencial
+                                                Já votou
                                             </button>
-                                        </div> 
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Felipe Lima</td>
                                     <td> 234.567.890-12</td>
                                     <td> felipe.lima@email.com</td>
-                                    <td class="text-uppercase">sp</td>
+                                    <td class="text-uppercase text-center">sp</td>
                                     <td>(22) 87654-3210</td>
-                                    <td>2</td>
+                                    <td>
+                                        <span>Info</span>
+                                    </td>
+                                    <td class="text-center">2</td>
                                     <td class="flex">
                                         <div class="d-flex justify-content-center">
-                                            <span class="btn btn-danger btn-sm w-75" disabled>
-                                                Indisponivel
-                                            </span>
+                                            <button class="btn btn-secondary btn-sm w-75 d-flex justify-content-center">
+                                                Não compareceu
+                                            </button>
                                         </div>
                                     </td>
                                 </tr>
@@ -265,14 +338,17 @@
                                     <td> Ana Oliveira</td>
                                     <td>345.678.901-23</td>
                                     <td>ana.oliveira@email.com</td>
-                                    <td class="text-uppercase">sp</td>
+                                    <td class="text-uppercase text-center">sp</td>
                                     <td>(33) 76543-2109</td>
-                                    <td>1</td>
+                                    <td>
+                                        <span>Suplente</span>
+                                    </td>
+                                    <td class="text-center">1</td>
                                     <td class="flex">
                                         <div class="d-flex justify-content-center">
-                                            <button class="btn btn-warning btn-sm w-75 ">
-                                                Liberado
-                                            </button>
+                                            <span class="btn btn-danger btn-sm w-75" disabled>
+                                                Não votou
+                                            </span>
                                         </div>
                                     </td>
                                 </tr>
@@ -280,15 +356,18 @@
                                     <td>Rodrigo Fernandes</td>
                                     <td>456.789.012-34</td>
                                     <td>rodrigo.fernandes@email.com</td>
-                                    <td class="text-uppercase">df</td>
+                                    <td class="text-uppercase text-center">df</td>
                                     <td> (44) 65432-1098</td>
-                                    <td>1</td>
+                                    <td>
+                                        <span>Info</span>
+                                    </td>
+                                    <td class="text-center">1</td>
                                     <td class="flex">
                                         <div class="d-flex justify-content-center">
                                             <button class="btn btn-secondary btn-sm w-75 d-flex justify-content-center">
                                                 Não compareceu
                                             </button>
-                                        </div>  
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>
@@ -309,30 +388,8 @@
         </div>
     </footer>
 
-    <div class="modal fade" id="dadosModal" tabindex="-1" role="dialog" aria-labelledby="dadosModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="dadosModalLabel">Deseja confirmar o usuario?</h5>
-                </div>
-                <div class="modal-body">
-                    <p><strong>Nome:</strong> <span id="modalNome"></span></p>
-                    <p><strong>CPF:</strong> <span id="modalCpf"></span></p>
-                    <p><strong>Telefone:</strong> <span id="modalTelefone"></span></p>
-                    <p><strong>Email:</strong> <span id="modalEmail"></span></p>
-                    <p><strong>Cargo:</strong> </p>
-                </div>
-                <div class="modal-footer justify-content-between">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Confirmar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -357,25 +414,9 @@
     <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
     <script src="js/demo/datatables-demo.js"></script>
     <script>
-        function confirmarPresenca() {
-            // Obtendo a linha da tabela que contém o botão de confirmação
-            var row = event.target.parentNode.parentNode;
-
-            // Obtendo os dados da linha
-            var nome = row.cells[0].innerText;
-            var cpf = row.cells[1].innerText;
-            var telefone = row.cells[2].innerText;
-            var email = row.cells[3].innerText;
-
-            // Preenchendo o modal com os dados obtidos
-            document.getElementById("modalNome").textContent = nome;
-            document.getElementById("modalCpf").textContent = cpf;
-            document.getElementById("modalTelefone").textContent = telefone;
-            document.getElementById("modalEmail").textContent = email;
-
-            // Abrindo o modal
-            $('#dadosModal').modal('show');
-        }
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
     </script>
 
 </body>
