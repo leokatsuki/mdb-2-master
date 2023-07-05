@@ -30,8 +30,8 @@
 
     <div class="navbar-nav d-flex justify-content-center align-items-center">
       <span class="mr-2 d-none d-lg-inline text-gray-600">Ola, <span class="mdb">usuario</span></span>
-      <div class="topbar-divider d-none d-sm-block"></div>
-      <a class="btn d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#logoutModal">
+      <div class="topbar-divider d-none d-lg-inline"></div>
+      <a class="btn d-flex justify-content-center align-items-center" id="logout" data-toggle="modal" data-target="#logoutModal">
         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
         Logout
       </a>
@@ -45,25 +45,25 @@
           <form class="d-flex flex-column justify-content-center w-75 align-items-center">
             <div class="card bg-white shadow mb-5 w-100">
               <div class="card-body">
-                <h5 class="p-3 font-weight-bold">
+                <h3 class="p-3 font-weight-bold">
                   1) Voce concorda com essa lei?
-                </h5>
+                </h4>
                 <hr />
                 <div class="p-5 d-flex justify-content-center">
-                  <div class="d-flex flex-column w-75" data-toggle="buttons">
-                    <label class="btn btn-outline-dark btn-small mt-3 font-weight-bold">
+                  <div class="d-flex flex-column w-100" data-toggle="buttons">
+                    <label class="btn btn-outline-dark btn-small mt-3 font-weight-bolder">
                       <input type="radio" name="options" id="sim" autocomplete="off" />
-                      <p class="btn-text">Sim</p>
+                      <p class="btn-text" >Sim</p>
                     </label>
-                    <label class="btn btn-outline-dark btn-small mt-3 font-weight-bold">
+                    <label class="btn btn-outline-dark btn-small mt-3 font-weight-bolder">
                       <input type="radio" name="options" id="nao" autocomplete="off" />
                       <p class="btn-text">Nao</p>
                     </label>
-                    <label class="btn btn-outline-dark btn-small mt-3 font-weight-bold">
+                    <label class="btn btn-outline-dark btn-small mt-3 font-weight-bolder">
                       <input type="radio" name="options" id="concordoPouco" autocomplete="off" />
                       <p class="btn-text">Concordo pouco</p>
                     </label>
-                    <label class="btn btn-outline-dark btn-small mt-3 font-weight-bold">
+                    <label class="btn btn-outline-dark btn-small mt-3 font-weight-bolder">
                       <input type="radio" name="options" id="concordoPouco" autocomplete="off" />
                       <p class="btn-text">Concordo muito</p>
                     </label>
@@ -154,10 +154,6 @@
     }
 
     @media (max-width: 576px) {
-      .btn-text {
-        font-size: 12px;
-      }
-
       .btn-small {
         padding: 0.15rem 0.3rem;
         font-size: 12px;
