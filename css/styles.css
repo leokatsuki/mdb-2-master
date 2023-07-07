@@ -11283,6 +11283,16 @@ footer {
   color: white;
 }
 
+.btn-outlined-mdb{
+  border: 3px solid #4ba647;
+  color: #4ba647;
+}
+
+.btn-outlined-mdb:hover{
+  border: 3px solid #43943f;
+  color: #4ba647;
+}
+
 .btn-mdb:hover{
   background-color: #43943f;
   color: white;
@@ -11290,6 +11300,10 @@ footer {
 
 .mdb {
   color: #4ba647;
+}
+
+.bg-mdb{
+  background: #43943f;
 }
 
 .border-left-mdb {

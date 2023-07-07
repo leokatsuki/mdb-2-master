@@ -1,48 +1,146 @@
 <!DOCTYPE html>
-<html lang="pt=br">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <!--CSS-->
-    <link rel="stylesheet" href="css/style_login.css">
-    <link rel="stylesheet" href="css/media_login.css">
+    <title>MDB - Votacao</title>
 
-    <!--JS & jQuery-->
-    <script type="text/javascript" src="js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="mdbLogo.png">
 </head>
+
 <body>
-    <div id="container">
-        <div class="banner">            
-            <p style="color: #fff; font-weight: 400;">
-                Seja bem vindo, acesse e aproveite todo o conteúdo,
-                <br>somos uma equipe de profissionais empenhados em
-                <br>trazer o melhor conteúdo direcionado a você, usuário. 
-            </p>
-            <br>
-            <img src="solutionz_logo.png" style="width:170px;height:120px;">
-        </div>
+    <section class="bg-light" style="height: 100vh;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col">
+                    <div class="card rounded-3 text-black">
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-flex flex-column justify-content-around align-items-center bg-mdb">
+                                <div class="text-white p-5 mt-5 flex-column d-flex justify-content-center align-items-center">
+                                    <h3 class="mb-4 mt-5">Olá, seja muito bem vindo!</h3>
+                                    <p class="mb-0 ml-2">Somos uma equipe de profissionais empenhados em trazer o melhor
+                                        conteúdo direcionado a você, usuário.</p>
+                                </div>
+                                <div class="row d-flex justify-content-center align-items-center">
+                                    <img src="logo_azul3.png" width="10%" alt="">
+                                    <div class="divider mx-3"></div>
+                                    <p class="text-gray-200 mt-3">Solutionz Consultoria</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card-body p-5 text-black">
+                                    <div class="text-center">
+                                        <img src="mdbLogo.png" style="width: 185px;" alt="logo">
+                                    </div>
+                                    <h4 class="text-gray-900 text-center mb-5 mt-5">Faça seu registro agora</h4>
 
-        <div class="box-login">
-            <br>
-            <img src="mdbLogo.png" style="width:100px;height:100px;">
-            <br>
-            <h1>
-                Olá!<br>
-                Seja muito bem vindo.
-            </h1>
+                                    <div class="form-outline mb-4">
+                                        <input type="text" class="form-control" placeholder="Nome" />
+                                    </div>
 
-            <div class="box">
-                <h2>Registre-se agora mesmo!</h2>
-                <input type="number" name="cp" required id="cpf" placeholder="Digite seu CPF">
-                <input type="email" name="email" required id="email" placeholder="Digite seu email">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="number" class="form-control" placeholder="CPF" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="number" class="form-control" placeholder="Telefone" />
+                                            </div>
+                                        </div>
+                                    </div>
 
-                <button class="btn-mdb">Entrar</button>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-check">
+                                                <label style="scale: 1.1;">Cargos:</label>
+                                                <div class="form-check ml-4 mb-2">
+                                                    <input class="form-check-input" style="scale: 1.5;" type="checkbox" value=""
+                                                        id="defaultCheck1">
+                                                    <label class="form-check-label" for="defaultCheck1">
+                                                        Titular
+                                                    </label>
+                                                </div>
+                                                <div class="form-check ml-4">
+                                                    <input class="form-check-input" style="scale: 1.5;" type="checkbox" value=""
+                                                        id="defaultCheck1">
+                                                    <label class="form-check-label" for="defaultCheck1">
+                                                        Suplente
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <select class="form-control">
+                                                <option value="1">Estado</option>
+                                                <option value="2">AC</option>
+                                                <option value="3">AL</option>
+                                                <option value="4">AP</option>
+                                                <option value="5">AM</option>
+                                                <option value="6">BA</option>
+                                                <option value="7">CE</option>
+                                                <option value="8">DF</option>
+                                                <option value="9">ES</option>
+                                                <option value="10">GO</option>
+                                                <option value="11">MA</option>
+                                                <option value="12">MT</option>
+                                                <option value="13">MS</option>
+                                                <option value="14">MG</option>
+                                                <option value="15">PA</option>
+                                                <option value="16">PB</option>
+                                                <option value="17">PR</option>
+                                                <option value="18">PE</option>
+                                                <option value="19">PI</option>
+                                                <option value="20">RJ</option>
+                                                <option value="21">RN</option>
+                                                <option value="22">RS</option>
+                                                <option value="23">RO</option>
+                                                <option value="24">RR</option>
+                                                <option value="25">SC</option>
+                                                <option value="26">SP</option>
+                                                <option value="27">SE</option>
+                                                <option value="28">TO</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="email" id="form3Example9" class="form-control" placeholder="Email"/>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button type="button" class="btn btn-mdb btn-lg mt-4 w-50">Cadastrar</button>
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-center mt-5">
+                                        <p class="mb-0 me-2">Já possui uma conta?</p>
+                                        <a href="login.html" type="button" class="btn btn-outlined-mdb ml-4">Login</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 </body>
+
 </html>
